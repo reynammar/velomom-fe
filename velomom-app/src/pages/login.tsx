@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../components/LoginPage/LoginForm';
+import LoginForm from '../components/Forms/LoginForm';
 import image from '../assets/images/Velomom.png';
 const LoginPage: React.FC = () => {
     return (
