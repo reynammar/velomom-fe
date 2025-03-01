@@ -1,4 +1,3 @@
-// src/components/LoginForm.tsx
 import React from 'react';
 import FormHeader from './FormHeader';
 import InputField from './InputField';
