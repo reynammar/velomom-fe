@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
-interface InputFieldProps {
+interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
-    type: string;
-    name: string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ label, type, name }) => {
+const InputField: React.FC<InputFieldProps> = ({ label, type, name, ...rest }) => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -24,6 +22,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, type, name }) => {
                     className="w-full py-2 px-4 border border-gray-300 rounded-lg text-sm font-light"
                     placeholder={`Masukkan ${label}`} 
                     name={name} 
+                    {...rest}
                 />
                 {type === 'password' && (
                     <button

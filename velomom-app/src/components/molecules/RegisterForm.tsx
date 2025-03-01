@@ -1,7 +1,7 @@
 import React from 'react';
-import FormHeader from './FormHeader';
-import InputField from './InputField';
-import ButtonForm from './ButtonForm';
+import FormHeader from '../atoms/FormHeader';
+import InputField from '../atoms/InputField';
+import ButtonForm from '../atoms/ButtonForm';
 
 const LoginForm: React.FC = () => {
     return (
@@ -15,7 +15,7 @@ const LoginForm: React.FC = () => {
             <InputField label="Name" type="text" name="name"/>
             <InputField label="Email" type="email" name="email"/>
             <InputField label="Password" type="password" name="password"/>
-            <ButtonForm>
+            <ButtonForm buttonType='submit'>
                 Daftar
             </ButtonForm>
         </form>
