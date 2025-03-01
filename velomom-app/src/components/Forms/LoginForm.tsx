@@ -5,7 +5,7 @@ import ButtonForm from './ButtonForm';
 
 const LoginForm: React.FC = () => {
     return (
-        <form action="" className="w-[540px] p-6 mr-4">
+        <form className="w-[540px] p-6 mr-4">
             <FormHeader 
                     title="Selamat Datang!" 
                     subtitle="Tidak punya akun?" 
