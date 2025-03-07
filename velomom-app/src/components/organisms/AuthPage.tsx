@@ -1,4 +1,3 @@
-import React from 'react';
 import LoginForm from '../molecules/LoginForm';
 import RegisterForm from '../molecules/RegisterForm';
 import image from '../../assets/images/Velomom.png';
@@ -7,7 +6,7 @@ interface AuthPageProps {
     isLogin: boolean;
 }
 
-const AuthPage: React.FC<AuthPageProps> = ({ isLogin }) => {
+const AuthPage = ({ isLogin }: AuthPageProps) => {
     return (
         <div className="flex h-screen font-lexend">
             <div className="flex-1 flex items-center justify-center">

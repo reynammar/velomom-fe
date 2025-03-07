@@ -1,9 +1,8 @@
-import React from 'react';
-import FormHeader from '../atoms/FormHeader';
-import InputField from '../atoms/InputField';
-import ButtonForm from '../atoms/ButtonForm';
+import FormHeader from '../atoms/forms/FormHeader';
+import InputField from '../atoms/forms/InputField';
+import Button from '../atoms/Button';
 
-const LoginForm: React.FC = () => {
+const LoginForm = () => {
     return (
         <form className="w-[540px] p-6 mr-4">
             <FormHeader 
@@ -14,9 +13,9 @@ const LoginForm: React.FC = () => {
                 />
             <InputField label="Email" type="email" name="email" />
             <InputField label="Password" type="password" name="password" />
-            <ButtonForm buttonType='submit'>
+            <Button buttonType='submit' classname='w-full py-3 px-6 bg-primary text-white rounded-2xl hover:bg-[#6d4d83] transition-all duration-300 cursor-pointer'>
                 Masuk
-            </ButtonForm>
+            </Button>
         </form>
     );
 };

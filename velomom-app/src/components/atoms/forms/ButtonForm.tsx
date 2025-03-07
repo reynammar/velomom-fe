@@ -9,7 +9,7 @@ interface ButtonFormProps {
 const ButtonForm: React.FC<ButtonFormProps> = ({children, buttonType}) => {
     return (
         <button
-            className="w-full py-3 px-6 bg-primary text-white rounded-2xl hover:bg-[#6d4d83]"
+            className="w-full py-3 px-6 bg-primary text-white rounded-2xl hover:bg-[#6d4d83] transition-all duration-300 cursor-pointer"
             type={buttonType}
         >
             {children}

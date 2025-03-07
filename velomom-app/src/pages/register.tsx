@@ -1,7 +1,6 @@
-import React from 'react';
 import AuthPage from '../components/organisms/AuthPage';
 
-const RegisterPage: React.FC = () => {
+const RegisterPage = () => {
     return <AuthPage isLogin={false} />;
 };
 

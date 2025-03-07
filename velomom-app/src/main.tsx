@@ -1,21 +1,12 @@
-// import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
-import './index.css';
-import LoginPage from "./pages/login";
-import RegisterPage from "./pages/register";
-import HomePage from "./pages/home";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-const root = document.getElementById("root");
+import { RouterProvider } from "react-router-dom";
+import router from "./routers/routers.tsx";
+// import "./App.css";
 
-ReactDOM.createRoot(root).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-    </Routes>
-  </BrowserRouter>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );
-
