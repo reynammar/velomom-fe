@@ -1,5 +1,6 @@
 import img from '../../../assets/images/HeroImage.png';
 import image from '../../../assets/images/star.svg';
+import Button from '../../atoms/Button';
 import CircleBackground from '../../atoms/CircleBackground';
 import FloatObject from '../../atoms/FloatObject';
 
@@ -15,9 +16,14 @@ const HeroSection = () => {
                 </div>
 
                 <div className="flex items-center h-full">
-                    <div className='flex justify-center items-center rounded-[16px] border-[1px] border-primary text-primary font-medium text-xl py-3 px-6 hover:bg-primary hover:text-white transition-all duration-300'>
-                        Apa itu VeloMom ? Geser Kebawah Yuk !
-                    </div>
+                    {/* <div className='flex justify-center items-center rounded-[16px] border-[1px] border-primary text-primary font-medium text-xl py-3 px-6 hover:bg-primary hover:text-white transition-all duration-300'>
+                        Mulai Sekarang
+                    </div> */}
+                    <Button classname='flex justify-center items-center rounded-[16px] border-[1px] border-primary text-primary font-medium text-xl py-3 px-6 hover:bg-primary hover:text-white transition-all duration-300' buttonType='button' 
+                    isRedirect={true}
+                    redirectTo='#about'>
+                        Mulai Sekarang
+                    </Button>
                 </div>
             </div>
             <div className="flex justify-center items-end h-full w-1/2 relative">

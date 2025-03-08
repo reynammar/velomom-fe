@@ -2,7 +2,7 @@ import image from '../../../assets/images/About.svg';
 
 const AboutSection = () => {
     return (
-        <section className="w-full h-[400px] flex justify-center items-center px-[70px] my-10 overflow-hidden gap-14">
+        <section className="w-full h-[400px] flex justify-center items-center px-[70px] my-10 overflow-hidden gap-14" id='about'>
             {/* Kolom Kiri */}
             <div className="flex flex-col w-[45%] gap-[28px]">
                 <h2 className="font-semibold text text-5xl text-third">Apa itu VeloMom?</h2>

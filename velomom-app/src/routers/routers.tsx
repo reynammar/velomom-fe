@@ -7,9 +7,12 @@ import LoginPage from "../pages/login";
 import RegisterPage from "../pages/register";
 import HomePage from "../pages/home";
 import VeloVentPage from "../pages/velovent";
-import VeloGuidePage from "../pages/artikel";
 import Journaling from "../pages/journaling";
 import DetailJurnal from "../pages/detailjurnal"
+import ArticlePage from "../pages/artikel";
+import VideoPage from "../pages/video";
+import DetailVideo from "../pages/detailvideo";
+import DetailArtikel from "../pages/detailartikel";
 
 const router = createBrowserRouter([
   {
@@ -53,10 +56,34 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/veloguide-page",
+    path: "/article-page",
     element: (
       <MainLayout>
-        <VeloGuidePage />
+        <ArticlePage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/video-page",
+    element: (
+      <MainLayout>
+        <VideoPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/detail-artikel",
+    element: (
+      <MainLayout>
+        <DetailArtikel />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/detail-video",
+    element: (
+      <MainLayout>
+        <DetailVideo />
       </MainLayout>
     ),
   },

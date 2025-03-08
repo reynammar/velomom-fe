@@ -1,4 +1,3 @@
-import React from 'react';
 import play from '../../assets/images/play.svg';
 
 interface VideoCardProps {
@@ -7,7 +6,7 @@ interface VideoCardProps {
     description: string;
 }
 
-const VideoCard: React.FC<VideoCardProps> = ({ image, title, description }) => {
+const VideoCard = ({ image, title, description }: VideoCardProps) => {
     return (
         <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md relative">
             <img src={image} alt={title} className="rounded-[10px] w-full h-[222px] object-cover" />

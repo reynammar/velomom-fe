@@ -1,14 +1,15 @@
+import play from '../../assets/images/play.svg';    
 
-interface ArticleCardProps {
+interface GuideCardProps {
     image: string;
     date: string;
     title: string;
     description: string;
 }
 
-const ArticleCard = ({ image, date, title, description }: ArticleCardProps) => {
+const GuideCard = ({ image, date, title, description }: GuideCardProps) => {
     return (
-        <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md">
+        <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md relative">
             <img src={image} alt={title} className="rounded-t-[22.5px] w-[372px] h-[152px]" />
             <div className="flex flex-col gap-1">
                 <div>
@@ -21,4 +22,4 @@ const ArticleCard = ({ image, date, title, description }: ArticleCardProps) => {
     );
 };
 
-export default ArticleCard;
+export default GuideCard;

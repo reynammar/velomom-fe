@@ -5,7 +5,7 @@ import Button from '../atoms/Button';
 import SubMenu from '../atoms/SubMenu';
 import { useScroll } from "../../hooks/useScroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 interface NavbarProps {
     logoSrc: string;
@@ -45,7 +45,7 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
                             onMouseLeave={() => setShowVeloCareSubMenu(false)}
                         >
                             <NavLink to="/">VeloCare</NavLink>
-                            <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+                            <FontAwesomeIcon icon={faChevronDown} className="ml-3 text-purplesecondary" />
                         </div>
                         {showVeloCareSubMenu && (
                             <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md z-10">
@@ -60,7 +60,7 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
                             onMouseLeave={() => setShowVeloGuideSubMenu(false)}
                         >
                             <NavLink to="/#">VeloGuide</NavLink>
-                            <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+                            <FontAwesomeIcon icon={faChevronDown} className="ml-3 text-purplesecondary" />
                         </div>
                         {showVeloGuideSubMenu && (
                             <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md z-10">

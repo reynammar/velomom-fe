@@ -12,7 +12,7 @@ const VeloventSection = () => {
                 {/* Title Section */}
                 <div className="w-full flex items-center justify-between">
                     <h2 className="w-[55%] font-semibold text-5xl text-third leading-14">Ikuti webinar menarik di VeloVent!</h2>
-                    <Button classname="rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
+                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
                         Selengkapnya
                     </Button>
                 </div>

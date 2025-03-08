@@ -1,5 +1,5 @@
 import Button from "../../atoms/Button";
-import ArticleCard from "../../molecules/ArticleCard";
+import ArticleCard from "../../molecules/GuideCard";
 import VideoCard from "../../molecules/VideoCard";
 import img from '../../../assets/images/artikel.jpg';
 import img2 from '../../../assets/images/artikel2.jpg';
@@ -55,7 +55,7 @@ const ContentSection = () => {
                 {/* Title */}
                 <div className="w-full flex items-center justify-between">
                     <h2 className="w-[55%] font-semibold text-5xl text-third leading-14">Artikel dari VeloGuide untukmu</h2>
-                    <Button classname="rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
+                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
                         Selengkapnya
                     </Button>
                 </div>
@@ -80,7 +80,7 @@ const ContentSection = () => {
                 {/* Title */}
                 <div className="w-full flex items-center justify-between">
                     <h2 className="w-[55%] font-semibold text-5xl text-third leading-14">Video dari VeloGuide untukmu</h2>
-                    <Button classname="rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
+                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
                         Selengkapnya
                     </Button>
                 </div>

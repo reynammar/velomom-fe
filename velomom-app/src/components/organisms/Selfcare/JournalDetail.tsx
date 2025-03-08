@@ -51,7 +51,7 @@ const JournalDetail = () => {
                     />
                 </div>
                 <div className='flex justify-end w-full'>
-                    <Button buttonType='button' classname='border-[1px] border-primary rounded-[16px] py-3 px-6 font-medium text-xl w-[228px]'>
+                    <Button buttonType='button' classname='border-[1px] border-primary rounded-[16px] py-3 px-6 font-medium text-xl w-[228px] text-primary hover:bg-primary hover:text-white'>
                         Hapus
                     </Button>
                 </div>  

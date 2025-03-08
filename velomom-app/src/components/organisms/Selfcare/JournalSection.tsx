@@ -35,8 +35,14 @@ const JournalSection = () => {
 
             {/* Riwayat Jurnal */}
             <div className="flex gap-8">
-                <div className="w-[70%] p-9 shadow-md rounded-3xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {/* Menggunakan grid dengan 2 kolom pada layar medium ke atas */}
+                <div className="w-[70%] p-9 shadow-md rounded-3xl flex flex-col gap-[28px]">
+                    <div className="flex justify-between">
+                        <h3 className="font-semibold text-[38px] text-third">Riwayat Jurnalmu</h3>
+                        <div className="rounded-full px-4 bg-primary flex justify-center items-center text-white hover:bg-purple-700 transition-all duration-300">
+                            <FontAwesomeIcon icon={faCalendarDays} className="text-3xl" />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="py-4 px-7 rounded-3xl bg-secondarywhite">
                             <div className="flex flex-col gap-4">
                                 <div className="flex items-center gap-4">
@@ -61,7 +67,7 @@ const JournalSection = () => {
                         <div className="py-4 px-7 rounded-3xl bg-secondarywhite">
                             <div className="flex flex-col gap-4">
                                 <div className="flex items-center gap-4">
-                                                                <img src={emoticon2} alt="sedih" className="w-[124px]" />
+                                    <img src={emoticon2} alt="sedih" className="w-[124px]" />
                                     <div className="flex flex-col gap-3">
                                         <div className="flex flex-col gap-0.5 text-secondary">
                                             <p className="font-light text-[16px]">Senin,</p>
