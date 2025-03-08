@@ -1,6 +1,6 @@
 import { faCalendarDays, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
-import mic from '../../../assets/images/mic.png'
+import mic from '../../../assets/images/mic.svg'
 import Icon from '../../atoms/Icon'
 import SearchBar from '../../molecules/SearchBar'
 import image from '../../../assets/images/slider-image.jpg'
@@ -9,7 +9,7 @@ const VeloVent = () => {
         <div className="px-[70px] overflow-hidden pt-[90px] pb-24 flex flex-col gap-10 w-full">
             {/* Header */}
             <div className="w-full">
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col">
                     <div className="flex gap-[200px] items-center">
                         <div className="flex flex-col gap-6">
                             <div className='flex flex-col gap-5'>
@@ -18,11 +18,15 @@ const VeloVent = () => {
                             </div>
                             <SearchBar/>
                         </div>
-                        <div className='w-[35%] justify-center'>
-                            <div className="flex p-20 inset-shadow-sm justify-center rounded-full">
-                                <img src={mic} alt="mic image"/>
+                        <div className='w-[35%] justify-center relative overflow-hidden'>
+                        <div className="flex p-20 justify-center z-20 relative">
+                            <img src={mic} alt="mic image" className="relative z-30 w-16" />
+                        </div>
+                        <div className='absolute p-10 rounded-full bg-blue-300 top- right-3 z-10'>
+                            <div className=' rounded-full bg-white top-20 z-10'>
                             </div>
                         </div>
+                    </div>
                     </div>
                     <hr className="border-2 border-pinkprimary" />
                 </div>
