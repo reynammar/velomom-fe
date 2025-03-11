@@ -12,9 +12,7 @@ const NavLink = ({ to, children, icon }: NavLinkProps) => {
     return (
         <RouterNavLink 
             to={to} 
-            className={({ isActive }) => 
-                `flex items-center text-purplesecondary text-xl${isActive ? '' : ''}`
-            }
+            className= "flex items-center text-purplesecondary text-xl font-medium tracking-[0.5%]"
         >
             {icon && <FontAwesomeIcon icon={icon} className="mx-10" />}
             {children}

@@ -35,7 +35,7 @@ const ReviewSection = () => {
     return (
         <section className="w-full py-20 px-[70px] overflow-hidden">
             <div className="flex flex-col gap-11">
-                <h2 className="font-semibold text-third w-full text-5xl">
+                <h2 className="font-semibold text-purple700 w-full text-5xl">
                     Apa kata mereka tentang VeloMom?
                 </h2>
                 <div className="grid grid-cols-2 gap-5">

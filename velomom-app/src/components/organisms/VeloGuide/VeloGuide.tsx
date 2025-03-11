@@ -18,7 +18,7 @@ const VeloGuide = ({ title, titlePage, isVideoPage, date, description, imageUrl 
         <div className="px-[70px] overflow-hidden pt-[134px] pb-24 flex flex-col gap-10 w-full">
             {/* Header page */}
             <div className="flex flex-col gap-7 items-center mx-auto w-[50%]">
-                <h1 className="font-bold text-6xl text-third">{titlePage}</h1>
+                <h1 className="font-bold text-6xl text-purple700">{titlePage}</h1>
                 
                 <SearchBar />
             </div>
@@ -27,7 +27,7 @@ const VeloGuide = ({ title, titlePage, isVideoPage, date, description, imageUrl 
 
             {/* Filter */}
             <div className="flex flex-col gap-7">
-                <hr className="border-[1.5px] border-pinkprimary" />
+                <hr className="border-[1.5px] border-purple100" />
                 <Filter />
             </div>
 

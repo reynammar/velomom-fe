@@ -9,19 +9,18 @@ const FilterCategory = () => {
     return (
         <div className="flex justify-between px-3 gap-5">
             <div className="flex gap-5 flex-wrap">
-                {/* Mapping kategori untuk membuat tombol */}
                 {categories.map((category, index) => (
                     <Button
                         key={index}
                         buttonType='button'
-                        classname="border-[1px] border-primary hover:bg-primary hover:text-white rounded-[18px] py-1 px-4 font-light text-primary text-sm"
+                        classname="border-[1px] border-purple500 hover:bg-purple500 hover:text-white rounded-[18px] py-1 px-4 font-light text-purple500 text-sm"
                     >
                         {category}
                     </Button>
                 ))}
             </div>
             <div>
-                <Button buttonType='submit' classname="rounded-[18px] px-3 py-1 bg-primary hover:bg-purplesecondary text-white">
+                <Button buttonType='submit' classname="rounded-[18px] px-3 py-1 bg-purple500 hover:bg-purple800 text-white">
                     <FontAwesomeIcon icon={faFilter} className="text-base" />
                 </Button>
             </div>

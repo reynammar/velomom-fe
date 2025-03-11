@@ -9,7 +9,7 @@ const JournalDetail = () => {
     return (
         <div className="overflow-hidden flex pt-20 w-full">
             <div className="flex flex-col py-[60px] px-10 gap-8">
-                <h4 className="font-semibold text-[32px] text-third">Jurnalmu yang Lain</h4>
+                <h4 className="font-semibold text-[32px] text-purple700">Jurnalmu yang Lain</h4>
                 <div className="flex flex-col gap-5">
                     <JournalCard
                         emoticon={emoticon}
@@ -32,12 +32,12 @@ const JournalDetail = () => {
                     <div className='flex flex-col gap-6'>
                         <div className='flex gap-8'>
                             <img src={emoticon3} alt="frustation emoticon" className='w-[200px] h-[200px]' />
-                            <div className='flex flex-col gap-1 text-third'>
+                            <div className='flex flex-col gap-1 text-purple700'>
                                 <h4 className='font-medium text-3xl'>Senin, 27 Juni 2025</h4>
                                 <h4 className='font-bold text-5xl leading-[120%]'>Merasa Sangat Kewalahan</h4>
                             </div>
                         </div>
-                        <div className='flex justify-center items-center bg-pinkprimary px-3 py-1 rounded-xl font-medium text-2xl w-[200px] h-11 text-purplesecondary'>
+                        <div className='flex justify-center items-center bg-purple100 px-3 py-1 rounded-xl font-medium text-2xl w-[200px] h-11 text-purple800'>
                             Frustasi
                         </div>
                     </div>
@@ -51,7 +51,7 @@ const JournalDetail = () => {
                     />
                 </div>
                 <div className='flex justify-end w-full'>
-                    <Button buttonType='button' classname='border-[1px] border-primary rounded-[16px] py-3 px-6 font-medium text-xl w-[228px] text-primary hover:bg-primary hover:text-white'>
+                    <Button buttonType='button' classname='border-[1px] border-purple500 rounded-[16px] py-3 px-6 font-medium text-xl w-[228px] text-purple500 hover:bg-purple500 hover:text-white'>
                         Hapus
                     </Button>
                 </div>  

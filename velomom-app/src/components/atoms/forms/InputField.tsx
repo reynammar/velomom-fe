@@ -15,7 +15,7 @@ const InputField = ({ label, type, name, ...rest }: InputFieldProps) => {
 
     return (
         <div className="mb-8">
-            <label className="block text-xl font-bold mb-1 text-third" htmlFor={name}>{label}</label>
+            <label className="block text-xl font-bold mb-1 text-purple700" htmlFor={name}>{label}</label>
             <div className="relative">
                 <input
                     type={type === 'password' && !isPasswordVisible ? 'password' : 'text'}

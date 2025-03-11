@@ -11,7 +11,7 @@ const SearchBar = () => {
                 name="search"
             />
             <button type="submit" className="absolute left-4 top-3 text-gray-500">
-                <FontAwesomeIcon icon={faMagnifyingGlass} className="text-base text-primary" />
+                <FontAwesomeIcon icon={faMagnifyingGlass} className="text-base text-purple500" />
             </button>
         </div>
     );

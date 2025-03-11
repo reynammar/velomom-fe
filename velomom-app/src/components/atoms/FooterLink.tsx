@@ -11,7 +11,7 @@ const NavLink = ({ to, children }: FooterLinkProps) => {
         <RouterNavLink 
             to={to} 
             className={({ isActive }) => 
-                `text-secondary hover:text-blue-500 ${isActive ? '' : 'font-light'}`
+                `text-purple900 hover:text-purple500 ${isActive ? '' : 'font-light'}`
             }
         >
             {children}

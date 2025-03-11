@@ -18,7 +18,7 @@ const UserReviewCard = ({ userName, userPhoto, rating, comment }: UserReviewCard
                 />
                 <div className="flex flex-col">
                     <h3 className="text-xl font-semibold text-third">{userName}</h3>
-                    <Rate disabled value={rating} className="text-red-500"/>
+                    <Rate disabled value={rating}/>
                 </div>
             </div>
             <p className="text-secondary font-light text-[19px] leading-7 flex-1 text-justify">

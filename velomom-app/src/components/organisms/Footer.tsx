@@ -20,7 +20,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="w-full bottom-0 left-0 z-50 flex items-center justify-between flex-wrap t-[72px] pt-[70px] px-[70px] gap-16 font-lexend bg-primarywhite">
+        <footer className="w-full bottom-0 left-0 z-50 flex items-center justify-between flex-wrap t-[72px] pt-[70px] px-[70px] gap-16 font-lexend bg-red50">
             <div className="flex justify-center gap-[100px]">
                 <div className="flex flex-col gap-8 w-[50%]">
                     <div className="flex flex-col gap-4">
@@ -32,7 +32,7 @@ const Footer = () => {
                     <SocialLinks />
                 </div>
                 <div className='flex flex-col gap-4 w-[15%]'>
-                    <h5 className="text-2xl text-third font-semibold">PAGES</h5>
+                    <h5 className="text-2xl text-purple700 font-semibold">PAGES</h5>
                     <div className="flex flex-col gap-4 text-xl">
                         {pages.map((page, index) => (
                             <FooterLink key={index} to={page.to}>{page.label}</FooterLink>
@@ -40,13 +40,13 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4 w-[35%]'>
-                    <h5 className="text-2xl text-third font-semibold">CONTACT</h5>
+                    <h5 className="text-2xl text-purple700 font-semibold">CONTACT</h5>
                     <ContactInfo />
                 </div>
             </div>
 
-            <div className="w-full flex flex-col justify-center items-center gap-5 text-secondary">
-                <hr className="border-secondary w-full border-1" />
+            <div className="w-full flex flex-col justify-center items-center gap-5 text-purple900">
+                <hr className="border-purple900 w-full border-1" />
                 <div className="flex justify-center items-center gap-3 text-[16px]">
                     <FontAwesomeIcon icon={faCopyright} />
                     <p>Copyright 2025. VeloMom Center. All Rights Reserved</p>

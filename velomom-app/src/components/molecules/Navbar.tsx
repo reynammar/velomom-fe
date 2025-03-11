@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import NavLink from '../atoms/NavLink';
-import Logo from '../atoms/LogoLink';
-import Button from '../atoms/Button';
-import SubMenu from '../atoms/SubMenu';
-import { useScroll } from "../../hooks/useScroll";
+import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../atoms/LogoLink';
+import SubMenu from '../atoms/SubMenu';
+import Button from '../atoms/Button';
+import { useScroll } from '../../hooks/useScroll';
 
 interface NavbarProps {
     logoSrc: string;
@@ -24,56 +24,77 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
     ];
 
     const veloGuideItems = [
-        { to: '/artikel', label: 'Artikel' },
-        { to: '/video', label: 'Video' },
+        { to: '/article-page', label: 'Artikel' },
+        { to: '/video-page', label: 'Video' },
     ];
+
+    const toggleVeloCareSubMenu = () => {
+        setShowVeloCareSubMenu((prev) => !prev);
+        setShowVeloGuideSubMenu(false);
+    };
+
+    const toggleVeloGuideSubMenu = () => {
+        setShowVeloGuideSubMenu((prev) => !prev);
+        setShowVeloCareSubMenu(false);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+            if (!target.closest('.submenu-container')) {
+                setShowVeloCareSubMenu(false);
+                setShowVeloGuideSubMenu(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     return (
         <nav
             className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 py-3 px-[70px] font-lexend shadow-md ${
-                isScrolled ? "bg-primarywhite shadow-lg" : "bg-primarywhite"
+                isScrolled ? "bg-red50 shadow-lg" : "bg-red50"
             }`}
         >
             <Logo src={logoSrc} alt="Logo" />
             <div className="flex justify-center items-center gap-3 relative">
                 <div className="flex mx-6 gap-12">
                     <NavLink to="/">Home</NavLink>
-                    <div className="relative">
+                    <div className="relative submenu-container">
                         <div
                             className="flex items-center cursor-pointer"
-                            onMouseEnter={() => setShowVeloCareSubMenu(true)}
-                            onMouseLeave={() => setShowVeloCareSubMenu(false)}
+                            onClick={toggleVeloCareSubMenu}
                         >
                             <NavLink to="/">VeloCare</NavLink>
-                            <FontAwesomeIcon icon={faChevronDown} className="ml-3 text-purplesecondary" />
+                            <FontAwesomeIcon icon={showVeloCareSubMenu ? faChevronUp : faChevronDown} className="ml-3 text-purple800" />
                         </div>
                         {showVeloCareSubMenu && (
-                            <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md z-10">
-                                <SubMenu items={veloCareItems} />
-                            </div>
+                            <SubMenu items={veloCareItems} />
                         )}
                     </div>
-                    <div className="relative">
+                    <div className="relative submenu-container">
                         <div
                             className="flex items-center cursor-pointer"
-                            onMouseEnter={() => setShowVeloGuideSubMenu(true)}
-                            onMouseLeave={() => setShowVeloGuideSubMenu(false)}
+                            onClick={toggleVeloGuideSubMenu}
                         >
                             <NavLink to="/#">VeloGuide</NavLink>
-                            <FontAwesomeIcon icon={faChevronDown} className="ml-3 text-purplesecondary" />
+                            <FontAwesomeIcon icon={showVeloGuideSubMenu ? faChevronUp : faChevronDown} className="ml-3 text-purple800" />
                         </div>
                         {showVeloGuideSubMenu && (
-                            <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md z-10">
-                                <SubMenu items={veloGuideItems} />
-                            </div>
+                            <SubMenu items={veloGuideItems} />
                         )}
                     </div>
-                    <NavLink to="/velovent">VeloVent</NavLink>
+                    <NavLink to="/velovent-page">VeloVent</NavLink>
                 </div>
-                <Button isRedirect={true} redirectTo="/login" classname='bg-primary text-white font-medium text-xl py-2 px-10 rounded-[18px] hover:bg-purple-600 transition-all duration-200 cursor-pointer'>
+                <Button 
+                    isRedirect={true} 
+                    redirectTo="/login" 
+                    classname='bg-purple500 text-white font-medium text-xl py-2 px-10 rounded-[18px] hover:bg-purple700 transition-all duration-200 cursor-pointer'>
                     Masuk
                 </Button>
-                
             </div>
         </nav>
     );

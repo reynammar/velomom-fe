@@ -54,8 +54,8 @@ const ContentSection = () => {
             <div className="w-full flex flex-col justify-center items-center gap-10">
                 {/* Title */}
                 <div className="w-full flex items-center justify-between">
-                    <h2 className="w-[55%] font-semibold text-5xl text-third leading-14">Artikel dari VeloGuide untukmu</h2>
-                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
+                    <h2 className="w-[55%] font-semibold text-5xl text-purple700 leading-14">Artikel dari VeloGuide untukmu</h2>
+                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-purple500" isRedirect={true} redirectTo="/login">
                         Selengkapnya
                     </Button>
                 </div>
@@ -72,15 +72,15 @@ const ContentSection = () => {
                     ))}
                 </div>
 
-                <hr className="border-secondarywhite w-full border-1/2" />
+                <hr className="border-purple50 w-full border-1/2" />
             </div>
 
             {/* Video */}
             <div className="w-full flex flex-col justify-center items-center gap-10">
                 {/* Title */}
                 <div className="w-full flex items-center justify-between">
-                    <h2 className="w-[55%] font-semibold text-5xl text-third leading-14">Video dari VeloGuide untukmu</h2>
-                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-primary" isRedirect={true} redirectTo="/login">
+                    <h2 className="w-[55%] font-semibold text-5xl text-purple700 leading-14">Video dari VeloGuide untukmu</h2>
+                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-purple500 hover:bg-purple700" isRedirect={true} redirectTo="/video-page">
                         Selengkapnya
                     </Button>
                 </div>

@@ -10,20 +10,47 @@
 } */
 
 @theme {
-  --color-primary: #6200EE;
-  --color-secondary: #170037;
+  /* Font */
   --font-lexend: "Lexend", sans-serif;
   --font-inter: "Inter", sans-serif;
-  --color-third: #4600A9;
-  --color-primarywhite: #FEF3F7;
-  --color-purplesecondary: #360083;
-  --color-hero: #EFE6FD;
-  --color-pinksecondary: #F8B1CC;
-  --color-pinkprimary: #CEB0FA;
+  /* Primary Color */
+  --color-purple50: #EFE6FD;
+  --color-purple100: #CEB0FA;
+  --color-purple300: #9654F4;
+  --color-purple500: #6200EE;
+  --color-purple700: #4600A9;
+  --color-purple800: #360083;
+  /* Secondary Color */
+  --color-red50: #FEF3F7;
+  --color-red100: #FCDBE7;
+  --color-red300: #F8B1CC;
+  --color-red500: #F58BB3;
+  --color-red700: #AE637F;
+  --color-red800: #874C62;
+  /* Neutral Color */
+  --color-grey50: #F5F5F5;
+  --color-grey100: #E1E1E1;
+  --color-grey300: #BEBEBE;
+  --color-grey500: #9E9E9E;
+  --color-grey700: #707070;
+  --color-grey800: #575757;
+  /* Gradient Color */
   --color-gradientcustom: rgba(206, 176, 250, 0.68);
-  --color-secondarywhite: #EFE6FD;
-  
-  
+  /* Font Color */
+  --color-purple900: #170037;
+  --color-gray900: #666666;
+  /* Color Custom */
+  --color-custom1: #E6D4FF;
+  --color-custom2: #E1CCFF;
+  --color-custom3: #C8A3FF;
+  /* Spacing */
+  --spacing-primaryPad: 70px;
+
+
+  /* Text */
+  --leading-text1: 150%;
+  --tracking-text1: 0.5%;
+  --leading-text2: 120%;
 }
 
 //Custom css

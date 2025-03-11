@@ -14,7 +14,7 @@ const LoginForm = () => {
             <InputField label="Name" type="text" name="name"/>
             <InputField label="Email" type="email" name="email"/>
             <InputField label="Password" type="password" name="password"/>
-            <Button buttonType='submit' classname='w-full py-3 px-6 bg-primary text-white rounded-2xl hover:bg-[#6d4d83] transition-all duration-300 cursor-pointer'>
+            <Button buttonType='submit' classname='w-full py-3 px-6 bg-purple500 text-white rounded-2xl hover:bg-purple700 transition-all duration-300 cursor-pointer'>
                 Daftar
             </Button>
         </form>
