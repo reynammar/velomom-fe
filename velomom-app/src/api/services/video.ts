@@ -1,10 +1,8 @@
-import axios from "axios";
 import api from "../core/core";
 
-
-export const getArticles = async () => {
+export const getVideo = async () => {
     try {
-        const response = await api.get('/articles/');
+        const response = await api.get('/videos/');
         console.log('API Response:', response);
         console.log('API Data:', response.data);
         return response.data;
@@ -14,17 +12,11 @@ export const getArticles = async () => {
     }
 };
 
-export const getAllArticles = async () => {
+export const getAllVideos = async () => {
   try {
-    const response = await api.get("/articles/");
+    const response = await api.get("/videos/");
     return response.data;
   } catch (error) {
     throw error;
   }
 };
-
-export const getArticleById = async (id: string) => {
-  const response = await axios.get(`/articles/${id}`);
-  return response.data;
-};
-

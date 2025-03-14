@@ -19,12 +19,8 @@ const VideoPage = () => {
         {videos.map((video, index) => (
                 <VeloGuide 
                     key={index}
-                    titlePage='Video' 
-                    title={video.title} 
-                    imageUrl={video.image} 
-                    description={video.description} 
+                    titlePage='Video'
                     isVideoPage={video.isVideoPage} 
-                    date={video.date}
                 />
             ))}
       <Footer/>

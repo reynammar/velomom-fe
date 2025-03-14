@@ -16,7 +16,9 @@ const VeloVent = () => {
                                 <h1 className='font-bold text-6xl text-purple500'>VeloVent</h1>
                                 <p className='font-light text-[18px] text-purple900'>Velovent menghadirkan webinar dan diskusi interaktif seputar baby blues dan kesejahteraan ibu</p>
                             </div>
-                            <SearchBar/>
+                            <SearchBar onSearch={function (): void {
+                                throw new Error('Function not implemented.');
+                            } }/>
                         </div>
                         <div className='w-[35%] justify-center relative overflow-hidden'>
                         <div className="flex p-20 justify-center z-20 relative">

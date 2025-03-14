@@ -21,12 +21,8 @@ const ArticlePage = () => {
             {articles.map((article, index) => (
                 <VeloGuide 
                     key={index}
-                    titlePage='Artikel' 
-                    title={article.title} 
-                    imageUrl={article.image} 
-                    description={article.description} 
-                    isVideoPage={article.isVideoPage} 
-                    date={article.date}
+                    titlePage='Artikel'
+                    isVideoPage={article.isVideoPage}
                 />
             ))}
             <Footer />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { login } from '../../api/services/auth';
+import { handleLogin } from '../../action/authActions';
 import FormHeader from '../atoms/forms/FormHeader';
 import InputField from '../atoms/forms/InputField';
 import Button from '../atoms/Button';
@@ -10,26 +10,24 @@ const LoginForm = () => {
     const [error, setError] = useState('');
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault(); // Mencegah reload halaman
-        setError(''); // Reset error state
+        event.preventDefault();
+        setError('');
 
         try {
-            const response = await login(username, password); // Panggil fungsi handleLogin
-            
-            // Memeriksa status respons
-            if (response && response.status === 200) {
-                // Jika login berhasil, simpan token atau lakukan navigasi
-                localStorage.setItem('token', response.data.token); // Simpan token di localStorage
-                window.location.href = '/home'; // Redirect ke halaman home
+            const response = await handleLogin(username, password);
+
+            if (response && response.token) {
+                localStorage.setItem('token', response.token);
+                localStorage.setItem('user', JSON.stringify(response.user)); // Jika backend kirim data user
+                window.location.href = '/home';
             } else {
-                setError('Login failed. Please check your credentials.'); // Set error message
+                setError('Login failed. Invalid credentials or no token received.');
             }
         } catch (err) {
-            // Menangani kesalahan dengan pemeriksaan tipe
             if (err instanceof Error) {
-                setError(err.message); // Set error message dari error
+                setError(err.message);
             } else {
-                setError('An unknown error occurred.'); // Pesan kesalahan umum
+                setError('An unknown error occurred.');
             }
         }
     };
@@ -42,24 +40,27 @@ const LoginForm = () => {
                 linkText="Daftar" 
                 linkHref="/register" 
             />
-            {error && <p className="text-red-500 mb-4">{error}</p>} {/* Tampilkan pesan kesalahan */}
+            {error && <p className="text-red-500 mb-4">{error}</p>}
             <InputField 
                 label="Username" 
                 type="text" 
                 name="username" 
-                classname='block text-xl font-bold mb-1 text-purple700' 
-                placeholder='Masukkan username'
-                onChange={(e) => setUsername(e.target.value)} // Update state username
+                classname="block text-xl font-bold mb-1 text-purple700" 
+                placeholder="Masukkan username"
+                onChange={(e) => setUsername(e.target.value)}
             />
             <InputField 
                 label="Password" 
                 type="password" 
                 name="password" 
-                classname='block text-xl font-bold mb-1 text-purple700' 
-                placeholder='Masukkan password'
-                onChange={(e) => setPassword(e.target.value)} // Update state password
+                classname="block text-xl font-bold mb-1 text-purple700" 
+                placeholder="Masukkan password"
+                onChange={(e) => setPassword(e.target.value)}
             />
-            <Button buttonType='submit' classname='w-full py-3 px-6 bg-purple500 text-white rounded-2xl hover:bg-purple700 transition-all duration-300 cursor-pointer'>
+            <Button 
+                buttonType="submit" 
+                classname="w-full py-3 px-6 bg-purple500 text-white rounded-2xl hover:bg-purple700 transition-all duration-300 cursor-pointer"
+            >
                 Login
             </Button>
         </form>

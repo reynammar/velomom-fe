@@ -32,8 +32,11 @@ const Profile = () => {
                     <h4 className="font-semibold text-3xl leading-text1 tracking-text1 text-purple700 text-center">Lastri Widya</h4>
                 </div>
             </div>
-            <div className="flex flex-col gap-6 p-6 items-center rounded-xl shadow-md w-[60%]">
-                <img src={profile} alt="" className="rounded-full w-48 h-48 object-cover object-top" />
+            <div className="flex flex-col gap-4 p-6 items-center rounded-xl shadow-md w-[60%]">
+                <h4 className="font-semibold text-3xl leading-text1 tracking-text1">Biodata</h4>
+                <div className="flex flex-col gap-7">
+                    
+                </div>
             </div>
         </div>
     </div>

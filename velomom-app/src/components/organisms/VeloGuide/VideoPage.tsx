@@ -46,7 +46,7 @@ const VideoPage = () => {
                         {videos.map((video, index) => (
                         <VideoCard 
                         key={index}
-                        image={video.image} 
+                        thumbnail={video.image} 
                         title={video.title} 
                         description={video.description} />
                     ))}

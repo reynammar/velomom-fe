@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp, faUser } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../atoms/LogoLink';
 import SubMenu from '../atoms/SubMenu';
 import Button from '../atoms/Button';
@@ -15,6 +15,7 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
     const { isScrolled } = useScroll();
     const [showVeloCareSubMenu, setShowVeloCareSubMenu] = useState(false);
     const [showVeloGuideSubMenu, setShowVeloGuideSubMenu] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const veloCareItems = [
         { to: '/journaling', label: 'Journaling' },
@@ -53,6 +54,11 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
         };
     }, []);
 
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setIsLoggedIn(!!token); // true jika ada token
+    }, []);
+
     return (
         <nav
             className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 py-3 px-[70px] font-lexend shadow-md ${
@@ -89,12 +95,22 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
                     </div>
                     <NavLink to="/velovent-page">VeloVent</NavLink>
                 </div>
-                <Button 
-                    isRedirect={true} 
-                    redirectTo="/login" 
-                    classname='bg-purple500 text-white font-medium text-xl py-2 px-10 rounded-[18px] hover:bg-purple700 transition-all duration-200 cursor-pointer'>
-                    Masuk
-                </Button>
+                {isLoggedIn ? (
+                    <Button 
+                        isRedirect={true} 
+                        redirectTo="/profile" 
+                        classname='bg-purple500 text-white font-medium text-xl py-2 px-10 rounded-[18px] hover:bg-purple700 transition-all duration-200 cursor-pointer flex gap-2 items-center'>
+                        <FontAwesomeIcon icon={faUser} />
+                        Profil
+                    </Button>
+                ) : (
+                    <Button 
+                        isRedirect={true} 
+                        redirectTo="/login" 
+                        classname='bg-purple500 text-white font-medium text-xl py-2 px-10 rounded-[18px] hover:bg-purple700 transition-all duration-200 cursor-pointer'>
+                        Masuk
+                    </Button>
+                )}
             </div>
         </nav>
     );

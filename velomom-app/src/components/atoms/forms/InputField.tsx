@@ -8,6 +8,8 @@ interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
     placeholder: string;
     classInput?: string;
     isTextArea?: boolean;
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 const InputField = ({
@@ -18,6 +20,8 @@ const InputField = ({
     type = "text",
     name,
     isTextArea = false,
+    value,
+    onChange,
     ...rest
 }: InputFieldProps) => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -35,6 +39,8 @@ const InputField = ({
                         className={`w-full py-2 px-4 border border-grey500 rounded-lg text-sm font-light text-grey500 focus:border-purple-500 focus:outline-none focus:text-purple900 ${classInput} resize-none`} 
                         placeholder={placeholder}
                         name={name}
+                        value={value}
+                        onChange={onChange as React.ChangeEventHandler<HTMLTextAreaElement>}
                         {...(rest as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
                     />
                 ) : (
@@ -43,6 +49,8 @@ const InputField = ({
                         className={`w-full py-2 px-4 border border-grey500 rounded-lg text-sm font-light text-grey500 focus:border-purple-500 focus:outline-none focus:text-purple900 ${classInput}`}
                         placeholder={placeholder}
                         name={name}
+                        value={value}
+                        onChange={onChange}
                         {...rest}
                     />
                 )}

@@ -1,14 +1,16 @@
+// src/actions/authAction.ts
 import { login as apiLogin, register as apiRegister } from '../api/services/auth';
 
 export const handleLogin = async (username: string, password: string) => {
     try {
-        const response = await apiLogin(username, password);
-        
-        if (response.status !== 200) {
-            throw new Error('Unexpected response status: ' + response.status);
+        const data = await apiLogin(username, password);
+
+        // Jika backend tidak mengirimkan token, bisa dianggap gagal
+        if (!data?.token) {
+            throw new Error('Login failed: Token not received from server.');
         }
 
-        return response.data;
+        return data;
     } catch (error) {
         if (error instanceof Error) {
             throw new Error('Login failed: ' + error.message);
@@ -20,13 +22,13 @@ export const handleLogin = async (username: string, password: string) => {
 
 export const handleRegister = async (username: string, password: string, name: string) => {
     try {
-        const response = await apiRegister(username, password, name);
-        
-        if (response.status !== 200) {
-            throw new Error('Unexpected response status: ' + response.status);
+        const data = await apiRegister(username, password, name);
+
+        if (!data?.token) {
+            throw new Error('Registration failed: Token not received from server.');
         }
 
-        return response.data;
+        return data;
     } catch (error) {
         if (error instanceof Error) {
             throw new Error('Registration failed: ' + error.message);

@@ -1,13 +1,13 @@
 import api from '../core/core';
 
 
-export const login = async (username: string, password: string) => {
-    const response = await api.post('/login', { username, password });
+export const login = async (email: string, password: string) => {
+    const response = await api.post('login', { email, password });
     return response.data;
 };
 
 
-export const register = async (username: string, password: string, name: string) => {
-    const response = await api.post('/register', { username, password, name });
+export const register = async (email: string, password: string, name: string) => {
+    const response = await api.post('register', { email, password, name });
     return response.data;
 };

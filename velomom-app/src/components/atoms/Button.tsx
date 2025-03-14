@@ -7,6 +7,7 @@ interface ButtonProps {
     classname?: string;
     isRedirect?: boolean;
     redirectTo?: string;
+    disabled?: boolean;
 }
 
 const Button = ({
@@ -15,9 +16,11 @@ const Button = ({
     buttonType = 'button',
     classname = '',
     isRedirect = false,
-    redirectTo }: ButtonProps) => {
+    redirectTo,
+    disabled = false
+}: ButtonProps) => {
     const handleClick = () => {
-        if (onClick) {
+        if (onClick && !disabled) {
             onClick();
         }
     };
@@ -33,9 +36,9 @@ const Button = ({
 
     if (isRedirect && redirectTo) {
         return (
-            <Link 
-                to={redirectTo} 
-                className={`transition-all duration-300 cursor-pointer ${classname}`} 
+            <Link
+                to={redirectTo}
+                className={`transition-all duration-300 cursor-pointer ${classname}`}
                 onClick={handleRedirect}
             >
                 {children}
@@ -45,9 +48,10 @@ const Button = ({
 
     return (
         <button
-            className={`text-center transition-all duration-300 cursor-pointer ${classname}`}
+            className={`text-center transition-all duration-300 ${disabled ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'} ${classname}`}
             type={buttonType}
             onClick={handleClick}
+            disabled={disabled}
         >
             {children}
         </button>

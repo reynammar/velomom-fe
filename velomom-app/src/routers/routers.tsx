@@ -125,7 +125,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/detail-artikel",
+    path: "/article/:id",
     element: (
       <MainLayout>
         <ScrollToTop/>
