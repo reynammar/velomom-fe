@@ -12,12 +12,12 @@ const AuthPage = ({ isLogin }: AuthPageProps) => {
             <div className="flex-1 flex items-center justify-center">
                 {isLogin ? <LoginForm /> : <RegisterForm />}
             </div>
-            <div className="w-1/2 h-min-screen bg-gradient-to-b from-[#dcd1ec] to-[#C8A3FF] flex items-center justify-center">
+            <div className="w-1/2 h-min-screen bg-gradient-to-b from-custom1 via-custom2 to-custom3 flex items-center justify-center">
                 <div>
                     <div className='flex justify-center'>
                         <img src={image} alt="Logo Velomom" className='w-[250px]' />
                     </div>
-                    <h1 className='bg-gradient-to-r from-[#6200EE] to-[#d856f1] bg-clip-text text-transparent text-[100px] font-lexend font-bold text-center'>VeloMom</h1>
+                    <h1 className='bg-gradient-to-l from-red300 via-purple300 to-purple500 bg-clip-text text-transparent text-[100px] font-lexend font-bold text-center'>VeloMom</h1>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@ const HeroSection = () => {
                     <Button classname='flex justify-center items-center rounded-[16px] border-[1px] border-purple500 text-purple500 font-medium text-xl py-3 px-6 hover:bg-purple500 hover:text-white transition-all duration-300' buttonType='button' 
                     isRedirect={true}
                     redirectTo='#about'>
-                        Mulai Sekarang
+                        Pelajari Lebih Lanjut
                     </Button>
                 </div>
             </div>

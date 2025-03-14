@@ -55,7 +55,7 @@ const ContentSection = () => {
                 {/* Title */}
                 <div className="w-full flex items-center justify-between">
                     <h2 className="w-[55%] font-semibold text-5xl text-purple700 leading-14">Artikel dari VeloGuide untukmu</h2>
-                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-purple500" isRedirect={true} redirectTo="/login">
+                    <Button classname="text-center rounded-2xl py-3 px-6 text-white w-[220px] h-12 bg-purple500 hover:bg-purple700" isRedirect={true} redirectTo="/article-page">
                         Selengkapnya
                     </Button>
                 </div>

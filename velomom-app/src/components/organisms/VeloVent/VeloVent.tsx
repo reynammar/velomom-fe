@@ -28,7 +28,7 @@ const VeloVent = () => {
                         </div>
                     </div>
                     </div>
-                    <hr className="border-2 border-pinkprimary" />
+                    <hr className="border-2 border-purple100" />
                 </div>
             </div>
 
@@ -39,67 +39,20 @@ const VeloVent = () => {
                     <div className='flex flex-col gap-10'>
                         <h2 className='font-semibold text-4xl text-purple700'>Diselenggarakan VeloVent</h2>
                         <div className='flex flex-col gap-12'>
-                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md">
+                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md hover:bg-purple50 transition ease-in-out duration-300 cursor-pointer">
                                 <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96"/>
                                 <div className="flex flex-col justify-center gap-3">
                                     <div className="flex flex-col gap-1">
                                         <h3 className="font-bold text-4xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
                                         <h6 className="font-light text-[18px] leading-7">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
                                     </div>
-                                    <div className="bg-purple100 py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
+                                    <div className='flex gap-3'>
+                                        <div className="bg-purple100 py-1 px-6 rounded-xl  text-purple800 font-medium text-[18px] flex items-center justify-center">
                                         <h6>Rp65.000</h6>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <div className="flex gap-2">
-                                            <Icon icon={faCalendarDays} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">Minggu, 22 Oktober 2025</h6>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faClock} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">13.00 - 16.00</h6>
+                                        <div className="bg-purple100 py-1 px-6 rounded-xl  text-purple800 font-medium text-[18px] flex items-center justify-center">
+                                            <h6>Sisa kuota: 12</h6>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faLocationDot} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">Online</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md">
-                                <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96"/>
-                                <div className="flex flex-col justify-center gap-3">
-                                    <div className="flex flex-col gap-1">
-                                        <h3 className="font-bold text-4xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
-                                        <h6 className="font-light text-[18px] leading-7">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
-                                    </div>
-                                    <div className="bg-[#CEB0FA] py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
-                                        <h6>Rp65.000</h6>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <div className="flex gap-2">
-                                            <Icon icon={faCalendarDays} className='text-primary' link="" />
-                                            <h6 className="font-medium text-xl">Minggu, 22 Oktober 2025</h6>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faClock} className='text-primary' link="" />
-                                            <h6 className="font-medium text-xl">13.00 - 16.00</h6>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faLocationDot} className='text-primary' link="" />
-                                            <h6 className="font-medium text-xl">Online</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md">
-                                <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96"/>
-                                <div className="flex flex-col justify-center gap-3">
-                                    <div className="flex flex-col gap-1">
-                                        <h3 className="font-bold text-4xl leading-10 text-secondary tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
-                                        <h6 className="font-light text-[18px] leading-7">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
-                                    </div>
-                                    <div className="bg-[#CEB0FA] py-1 px-6 rounded-xl w-[124px] h-9 text-purplesecondary font-medium text-[18px] flex items-center justify-center">
-                                        <h6>Rp65.000</h6>
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <div className="flex gap-2">
@@ -122,67 +75,20 @@ const VeloVent = () => {
                     <div className='flex flex-col gap-10'>
                         <h2 className='font-semibold text-4xl text-purple700'>Event Lainnya</h2>
                         <div className='flex flex-col gap-12'>
-                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md">
+                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md hover:bg-purple50 transition ease-in-out duration-300  cursor-pointer">
                                 <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96"/>
                                 <div className="flex flex-col justify-center gap-3">
                                     <div className="flex flex-col gap-1">
                                         <h3 className="font-bold text-4xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
                                         <h6 className="font-light text-[18px] leading-7">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
                                     </div>
-                                    <div className="bg-[#CEB0FA] py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
+                                    <div className='flex gap-3'>
+                                        <div className="bg-purple100 py-1 px-6 rounded-xl  text-purple800 font-medium text-[18px] flex items-center justify-center">
                                         <h6>Rp65.000</h6>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <div className="flex gap-2">
-                                            <Icon icon={faCalendarDays} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">Minggu, 22 Oktober 2025</h6>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faClock} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">13.00 - 16.00</h6>
+                                        <div className="bg-purple100 py-1 px-6 rounded-xl  text-purple800 font-medium text-[18px] flex items-center justify-center">
+                                            <h6>Sisa kuota: 12</h6>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faLocationDot} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">Online</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md">
-                                <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96"/>
-                                <div className="flex flex-col justify-center gap-3">
-                                    <div className="flex flex-col gap-1">
-                                        <h3 className="font-bold text-4xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
-                                        <h6 className="font-light text-[18px] leading-7">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
-                                    </div>
-                                    <div className="bg-purple100 py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
-                                        <h6>Rp65.000</h6>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <div className="flex gap-2">
-                                            <Icon icon={faCalendarDays} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">Minggu, 22 Oktober 2025</h6>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faClock} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">13.00 - 16.00</h6>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faLocationDot} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-xl">Online</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12 shadow-md">
-                                <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96"/>
-                                <div className="flex flex-col justify-center gap-3">
-                                    <div className="flex flex-col gap-1">
-                                        <h3 className="font-bold text-4xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
-                                        <h6 className="font-light text-[18px] leading-7">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
-                                    </div>
-                                    <div className="bg-[#CEB0FA] py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
-                                        <h6>Rp65.000</h6>
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <div className="flex gap-2">
@@ -203,44 +109,24 @@ const VeloVent = () => {
                         </div>
                     </div>
                 </div>
-                {/* Aside */}
-                <div className="w-[60%] flex gap-5 pl-7 border-l-2 border-pinkprimary ">
+
+                <div className="w-[60%] flex gap-5 pl-7 border-l-2 border-purple100 mt-20">
                     <div className="flex flex-col gap-4">
                         <h5 className="font-semibold text-4xl leading-[150%] text-purple700">Event Terdaftar</h5>
                         <div className='flex flex-col gap-5'>
-                            <div className="bg-white flex items-center px-7 py-6 rounded-2xl gap-12 shadow-md">
+                            <div className="bg-white flex items-center px-7 py-6 rounded-2xl gap-12 shadow-md hover:bg-purple50 transition ease-in-out duration-300 cursor-pointer">
                                 <div className="flex flex-col justify-center gap-3">
                                     <div className="flex flex-col gap-1">
                                         <h3 className="font-bold text-2xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
                                         <h6 className="font-light text-[15px] leading-[150%] line-clamp-2">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
                                     </div>
-                                    <div className="bg-purple100 py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
+                                    <div className='flex gap-3'>
+                                        <div className="bg-purple100 py-1 px-4 rounded-xl  text-purple800 font-medium text-sm flex items-center justify-center">
                                         <h6>Rp65.000</h6>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        <div className="flex gap-2">
-                                            <Icon icon={faCalendarDays} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-[18px]">Minggu, 22 Oktober 2025</h6>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faClock} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-[18px]">13.00 - 16.00</h6>
+                                        <div className="bg-purple100 py-1 px-4 rounded-xl  text-purple800 font-medium text-sm flex items-center justify-center">
+                                            <h6>Sisa kuota: 12</h6>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Icon icon={faLocationDot} className='text-purple500' link="" />
-                                            <h6 className="font-medium text-[18px]">Online</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bg-white flex items-center px-7 py-6 rounded-2xl gap-12 shadow-md">
-                                <div className="flex flex-col justify-center gap-3">
-                                    <div className="flex flex-col gap-1">
-                                        <h3 className="font-bold text-2xl leading-10 text-purple900 tracking-tight">Cara mengelola Stres untuk para Ibu</h3>
-                                        <h6 className="font-light text-[15px] leading-[150%] line-clamp-2">Pelajari cara mengatasi stres dan tekanan emosional setelah melahirkan dengan teknik relaksasi sederhana serta dukungan profesional untuk menjaga kesehatan mental ibu.</h6>
-                                    </div>
-                                    <div className="bg-purple100 py-1 px-6 rounded-xl w-[124px] h-9 text-purple800 font-medium text-[18px] flex items-center justify-center">
-                                        <h6>Rp65.000</h6>
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <div className="flex gap-2">

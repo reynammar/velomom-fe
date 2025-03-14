@@ -11,9 +11,9 @@ const LoginForm = () => {
                     linkText="Masuk" 
                     linkHref="/login" 
                 />
-            <InputField label="Name" type="text" name="name"/>
-            <InputField label="Email" type="email" name="email"/>
-            <InputField label="Password" type="password" name="password"/>
+            <InputField label="Nama" type="text" name="name" classname='block text-xl font-bold mb-1 text-purple700' placeholder='Masukkan nama'/>
+            <InputField label="Email" type="email" name="email" classname='block text-xl font-bold mb-1 text-purple700' placeholder='Masukkan email'/>
+            <InputField label="Password" type="password" name="password" classname='block text-xl font-bold mb-1 text-purple700' placeholder='Masukkan password'/>
             <Button buttonType='submit' classname='w-full py-3 px-6 bg-purple500 text-white rounded-2xl hover:bg-purple700 transition-all duration-300 cursor-pointer'>
                 Daftar
             </Button>

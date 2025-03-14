@@ -20,7 +20,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="w-full bottom-0 left-0 z-50 flex items-center justify-between flex-wrap t-[72px] pt-[70px] px-[70px] gap-16 font-lexend bg-red50">
+        <footer className="w-full bottom-0 left-0 z-40 flex items-center justify-between flex-wrap t-[72px] pt-[70px] px-[70px] gap-16 font-lexend bg-red50">
             <div className="flex justify-center gap-[100px]">
                 <div className="flex flex-col gap-8 w-[50%]">
                     <div className="flex flex-col gap-4">

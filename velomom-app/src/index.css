@@ -51,6 +51,12 @@
   --leading-text1: 150%;
   --tracking-text1: 0.5%;
   --leading-text2: 120%;
+  --text-beforeXl: 18px;
+  --text-beforebase1: 12px;
+  --text-before5xl: 40px;
+  
+  /* Styling */
+  --shadow-sidebar: 1px 0 18px rgba(0, 0, 0, 0.1);
 }
 
 //Custom css

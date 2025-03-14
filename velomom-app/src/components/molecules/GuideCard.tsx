@@ -9,8 +9,8 @@ interface GuideCardProps {
 
 const GuideCard = ({ image, date, title, description }: GuideCardProps) => {
     return (
-        <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md relative">
-            <img src={image} alt={title} className="rounded-t-[22.5px] w-[372px] h-[152px]" />
+        <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md relative hover:bg-purple50 transition-all duration-300 cursor-pointer">
+            <img src={image} alt={title} className="rounded-t-[22.5px] w-[372px] h-[152px] object-cover" />
             <div className="flex flex-col gap-1">
                 <div>
                     <p className="font-medium text-[12px] text-grey500">{date}</p>

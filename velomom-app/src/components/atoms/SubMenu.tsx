@@ -11,7 +11,7 @@ const SubMenu = ({ items }: SubMenuProps) => {
                 <NavLink
                     key={item.to}
                     to={item.to}
-                    className="block px-3 py-1 text-purple700 font-medium text-xl hover:text-purple300 transition duration-200"
+                    className="block px-3 py-1 text-purple700 font-medium text-xl hover:border-b-2 hover:border-purple800 transition-all duration-200"
                 >
                     {item.label}
                 </NavLink>

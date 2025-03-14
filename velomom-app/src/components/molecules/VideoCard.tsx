@@ -8,7 +8,7 @@ interface VideoCardProps {
 
 const VideoCard = ({ image, title, description }: VideoCardProps) => {
     return (
-        <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md relative">
+        <div className="flex flex-col justify-between gap-2 rounded-[22.5px] p-6 shadow-md relative hover:bg-purple50 transition-all duration-300 cursor-pointer">
             <img src={image} alt={title} className="rounded-[10px] w-full h-[222px] object-cover" />
             <div className="flex flex-col gap-1">
                 <p className="font-semibold text-[18px] text-purple900 leading-7">{title}</p>

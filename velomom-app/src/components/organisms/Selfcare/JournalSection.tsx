@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import imageGrup from '../../../assets/images/image-group.png';
 import profileuser1 from '../../../assets/images/profileuser1.png';
 import profileuser2 from '../../../assets/images/profileuser2.png';
-import Button from "../../atoms/forms/ButtonForm";
+import Button from "../../atoms/Button";
 import emoticon1 from '../../../assets/images/Emotion.svg';
 import emoticon2 from '../../../assets/images/Emotion2.svg';
 import emoticon3 from '../../../assets/images/Emotion3.svg';
@@ -41,9 +41,9 @@ const JournalSection = () => {
                 <div className="w-[70%] p-9 shadow-md rounded-3xl flex flex-col gap-[28px]">
                     <div className="flex justify-between">
                         <h3 className="font-semibold text-[38px] text-purple700">Riwayat Jurnalmu</h3>
-                        <div className="rounded-full px-4 bg-purple500 flex justify-center items-center text-white hover:bg-purple700 transition-all duration-300">
+                        <Button classname="rounded-full px-4 bg-purple500 flex justify-center items-center text-white hover:bg-purple700 transition-all duration-300">
                             <FontAwesomeIcon icon={faCalendarDays} className="text-3xl" />
-                        </div>
+                        </Button>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="py-4 px-7 rounded-3xl bg-purple50">
@@ -62,12 +62,12 @@ const JournalSection = () => {
                                     <h6 className="font-semibold text-xl">Merasa Sangat Kewalahan</h6>
                                     <p className="font-light text-[15px]">Hari ini rasanya benar-benar kacau. Si kecil rewel dari pagi, aku bahkan belum sempat duduk tenang sejak bangun tidur. Setiap kali aku mencoba menaruhnya di kasur, dia langsung menangis lagi.</p>
                                 </div>
-                                <Button buttonType='button'>
+                                <Button classname="w-full bg-purple500 rounded-2xl py-3 px-6 text-white">
                                     Lihat
                                 </Button>
                             </div>
                         </div>
-                        <div className="py-4 px-7 rounded-3xl bg-purple100">
+                        <div className="py-4 px-7 rounded-3xl bg-purple50">
                             <div className="flex flex-col gap-4">
                                 <div className="flex items-center gap-4">
                                     <img src={emoticon2} alt="sedih" className="w-[124px]" />

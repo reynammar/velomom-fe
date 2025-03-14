@@ -4,31 +4,53 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
+    classname: string;
+    placeholder: string;
+    classInput?: string;
+    isTextArea?: boolean;
 }
 
-const InputField = ({ label, type, name, ...rest }: InputFieldProps) => {
+const InputField = ({
+    classInput = "",
+    placeholder,
+    label,
+    classname,
+    type = "text",
+    name,
+    isTextArea = false,
+    ...rest
+}: InputFieldProps) => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
-        setIsPasswordVisible(!isPasswordVisible);
+        setIsPasswordVisible(prev => !prev);
     };
 
     return (
         <div className="mb-8">
-            <label className="block text-xl font-bold mb-1 text-purple700" htmlFor={name}>{label}</label>
+            <label className={`${classname}`} htmlFor={name}>{label}</label>
             <div className="relative">
-                <input
-                    type={type === 'password' && !isPasswordVisible ? 'password' : 'text'}
-                    className="w-full py-2 px-4 border border-gray-300 rounded-lg text-sm font-light"
-                    placeholder={`Masukkan ${label}`} 
-                    name={name} 
-                    {...rest}
-                />
+                {isTextArea ? (
+                    <textarea
+                        className={`w-full py-2 px-4 border border-grey500 rounded-lg text-sm font-light text-grey500 focus:border-purple-500 focus:outline-none focus:text-purple900 ${classInput} resize-none`} 
+                        placeholder={placeholder}
+                        name={name}
+                        {...(rest as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
+                    />
+                ) : (
+                    <input
+                        type={type === 'password' && !isPasswordVisible ? 'password' : 'text'}
+                        className={`w-full py-2 px-4 border border-grey500 rounded-lg text-sm font-light text-grey500 focus:border-purple-500 focus:outline-none focus:text-purple900 ${classInput}`}
+                        placeholder={placeholder}
+                        name={name}
+                        {...rest}
+                    />
+                )}
                 {type === 'password' && (
                     <button
                         type="button"
                         onClick={togglePasswordVisibility}
-                        className="absolute right-3 top-2 text-gray-500"
+                        className="absolute right-3 top-2 text-grey500"
                     >
                         <FontAwesomeIcon icon={isPasswordVisible ? faEyeSlash : faEye} />
                     </button>

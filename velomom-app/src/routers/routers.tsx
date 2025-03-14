@@ -13,6 +13,11 @@ import ArticlePage from "../pages/artikel";
 import VideoPage from "../pages/video";
 import DetailVideo from "../pages/detailvideo";
 import DetailArtikel from "../pages/detailartikel";
+import DetailEventPage from "../pages/detailevent";
+import TambahJournal from "../pages/tambahjurnal";
+import TambahJournal2 from "../pages/tambahjurnal2";
+import TambahJournal3 from "../pages/tambahjurnal3";
+import ProfilePage from "../pages/profile";
 
 const router = createBrowserRouter([
   {
@@ -40,10 +45,42 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/profile",
+    element: (
+      <MainLayout>
+        <ProfilePage />
+      </MainLayout>
+    ),
+  },
+  {
     path: "/journaling",
     element: (
       <MainLayout>
         <Journaling />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/tambah-journal",
+    element: (
+      <MainLayout>
+        <TambahJournal />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/tambah-journal2",
+    element: (
+      <MainLayout>
+        <TambahJournal2 />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/tambah-journal3",
+    element: (
+      <MainLayout>
+        <TambahJournal3 />
       </MainLayout>
     ),
   },
@@ -92,6 +129,14 @@ const router = createBrowserRouter([
     element: (
       <MainLayout>
         <VeloVentPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/velovent-detail",
+    element: (
+      <MainLayout>
+        <DetailEventPage />
       </MainLayout>
     ),
   },
