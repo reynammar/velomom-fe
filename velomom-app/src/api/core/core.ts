@@ -8,10 +8,14 @@ const api = axios.create({
 });
 
 api.interceptors.response.use(
-    (response) => response,
-    (error) => {
-        return Promise.reject(error);
-    }
+  (response) => response,
+  (error) => {
+    const message =
+      error?.response?.data?.message || "Terjadi kesalahan pada server.";
+    console.error("API Error:", message);
+    return Promise.reject(error);
+  }
 );
+
 
 export default api;

@@ -7,8 +7,17 @@ import img3 from '../../../assets/images/artikel3.jpg';
 import img4 from '../../../assets/images/imagevideo1.jpg';
 import img5 from '../../../assets/images/imagevideo2.jpg';
 import img6 from '../../../assets/images/imagevideo3.jpg';
+import { getArticles } from "../../../api/services/articles";
 
 const ContentSection = () => {
+    (async () => {
+    try {
+        const articles = await getArticles();
+        console.log('Fetched Articles:', articles);
+    } catch (error) {
+        console.error('Error fetching articles:', error);
+    }
+})();
     const articles = [
         {
             image: img,

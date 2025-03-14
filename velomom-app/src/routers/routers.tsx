@@ -1,6 +1,4 @@
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import '../index.css';
 import LoginPage from "../pages/login";
@@ -22,6 +20,11 @@ import NotFound from "../pages/notfound"
 import ScrollToTop from "../hooks/scrollToTop"
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navigate to="/home" />
+
+  },
   {
     path: "/home",
     element: (
