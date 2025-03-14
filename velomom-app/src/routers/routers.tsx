@@ -23,7 +23,7 @@ import ScrollToTop from "../hooks/scrollToTop"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: (
       <MainLayout>
         <ScrollToTop/>
@@ -161,6 +161,7 @@ const router = createBrowserRouter([
     path: "*",
     element: (
       <MainLayout>
+        <ScrollToTop/>
         <NotFound />
       </MainLayout>
     ),

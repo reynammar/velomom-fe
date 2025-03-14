@@ -15,7 +15,7 @@ const notfound = () => {
                 <h1 className="font-bold text-9xl leading-text1 tracking-text1 text-purple500">404</h1>
                 <h3 className="font-semibold text-5xl leading-text1 tracking-text1 text-purple900">OOPS! Page not avaible</h3>
                 <h5 className="font-semibold text-3xl leading-text1 tracking-text1 text-purple900">Want to explore other pages?</h5>
-                <Button isRedirect={true} redirectTo="/" classname="bg-purple500 hover:bg-purple-700 py-2 px-6 rounded-2xl text-white font-semibold mt-5" >
+                <Button isRedirect={true} redirectTo="/home" classname="bg-purple500 hover:bg-purple-700 py-2 px-6 rounded-2xl text-white font-semibold mt-5" >
                     Start to Explore
                 </Button>
             </div>

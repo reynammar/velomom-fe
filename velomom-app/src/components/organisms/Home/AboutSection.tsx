@@ -1,7 +1,16 @@
+import { getArticles } from '../../../api/services/articles';
 import image from '../../../assets/images/About.svg';
 import icon from '../../../assets/images/list-icon.svg';
 
 const AboutSection = () => {
+    (async () => {
+    try {
+        const articles = await getArticles();
+        console.log('Fetched Articles:', articles);
+    } catch (error) {
+        console.error('Error fetching articles:', error);
+    }
+})();
     return (
         <section className="w-full h-[400px] flex justify-center items-center px-[70px] my-10 overflow-hidden gap-14" id='about'>
             <div className="flex flex-col w-[45%] gap-[28px]">

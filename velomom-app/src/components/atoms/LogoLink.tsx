@@ -7,7 +7,7 @@ interface LogoProps {
 
 const Logo = ({ src, alt }: LogoProps) => {
     return (
-        <Link to="/">
+        <Link to="/home">
         <img src={src} alt={alt} className="h-14" />
         </Link>
     );

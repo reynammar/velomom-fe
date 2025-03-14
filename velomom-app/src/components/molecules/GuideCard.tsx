@@ -1,4 +1,3 @@
-import play from '../../assets/images/play.svg';    
 
 interface GuideCardProps {
     image: string;
