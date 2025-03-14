@@ -18,12 +18,15 @@ import TambahJournal from "../pages/tambahjurnal";
 import TambahJournal2 from "../pages/tambahjurnal2";
 import TambahJournal3 from "../pages/tambahjurnal3";
 import ProfilePage from "../pages/profile";
+import NotFound from "../pages/notfound"
+import ScrollToTop from "../hooks/scrollToTop"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <MainLayout>
+        <ScrollToTop/>
         <HomePage />
       </MainLayout>
     ),
@@ -32,6 +35,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       <MainLayout>
+        <ScrollToTop/>
         <LoginPage />
       </MainLayout>
     ),
@@ -40,6 +44,7 @@ const router = createBrowserRouter([
     path: "/register",
     element: (
       <MainLayout>
+        <ScrollToTop/>
         <RegisterPage />
       </MainLayout>
     ),
@@ -48,6 +53,7 @@ const router = createBrowserRouter([
     path: "/profile",
     element: (
       <MainLayout>
+        <ScrollToTop/>
         <ProfilePage />
       </MainLayout>
     ),
@@ -56,6 +62,7 @@ const router = createBrowserRouter([
     path: "/journaling",
     element: (
       <MainLayout>
+        <ScrollToTop/>
         <Journaling />
       </MainLayout>
     ),
@@ -64,7 +71,8 @@ const router = createBrowserRouter([
     path: "/tambah-journal",
     element: (
       <MainLayout>
-        <TambahJournal />
+        <ScrollToTop/>
+        <TambahJournal/>
       </MainLayout>
     ),
   },
@@ -72,7 +80,8 @@ const router = createBrowserRouter([
     path: "/tambah-journal2",
     element: (
       <MainLayout>
-        <TambahJournal2 />
+        <ScrollToTop/>
+        <TambahJournal2/>
       </MainLayout>
     ),
   },
@@ -80,7 +89,8 @@ const router = createBrowserRouter([
     path: "/tambah-journal3",
     element: (
       <MainLayout>
-        <TambahJournal3 />
+        <ScrollToTop/>
+        <TambahJournal3/>
       </MainLayout>
     ),
   },
@@ -88,7 +98,8 @@ const router = createBrowserRouter([
     path: "/journaling-detail",
     element: (
       <MainLayout>
-        <DetailJurnal />
+        <ScrollToTop/>
+        <DetailJurnal/>
       </MainLayout>
     ),
   },
@@ -96,7 +107,8 @@ const router = createBrowserRouter([
     path: "/article-page",
     element: (
       <MainLayout>
-        <ArticlePage />
+        <ScrollToTop/>
+        <ArticlePage/>
       </MainLayout>
     ),
   },
@@ -104,7 +116,8 @@ const router = createBrowserRouter([
     path: "/video-page",
     element: (
       <MainLayout>
-        <VideoPage />
+        <ScrollToTop/>
+        <VideoPage/>
       </MainLayout>
     ),
   },
@@ -112,7 +125,8 @@ const router = createBrowserRouter([
     path: "/detail-artikel",
     element: (
       <MainLayout>
-        <DetailArtikel />
+        <ScrollToTop/>
+        <DetailArtikel/>
       </MainLayout>
     ),
   },
@@ -120,7 +134,8 @@ const router = createBrowserRouter([
     path: "/detail-video",
     element: (
       <MainLayout>
-        <DetailVideo />
+        <ScrollToTop/>
+        <DetailVideo/>
       </MainLayout>
     ),
   },
@@ -128,7 +143,8 @@ const router = createBrowserRouter([
     path: "/velovent-page",
     element: (
       <MainLayout>
-        <VeloVentPage />
+        <ScrollToTop/>
+        <VeloVentPage/>
       </MainLayout>
     ),
   },
@@ -136,7 +152,16 @@ const router = createBrowserRouter([
     path: "/velovent-detail",
     element: (
       <MainLayout>
-        <DetailEventPage />
+        <ScrollToTop/>
+        <DetailEventPage/>
+      </MainLayout>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <MainLayout>
+        <NotFound />
       </MainLayout>
     ),
   },

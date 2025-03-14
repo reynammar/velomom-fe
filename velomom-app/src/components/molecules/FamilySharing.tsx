@@ -1,7 +1,7 @@
 import imageGrup from '../../assets/images/image-group.png';
 import profileuser1 from '../../assets/images/profileuser1.png';
 import profileuser2 from '../../assets/images/profileuser2.png';
-import Button from "../atoms/forms/ButtonForm";
+import Button from "../atoms/Button";
 
 const FamilySharing = () => {
     return (
@@ -22,7 +22,9 @@ const FamilySharing = () => {
                     </div>
                 </div>
             </div>
-            <Button buttonType='button'>Lihat</Button>
+            <Button buttonType='button' classname='bg-purple500 hover:bg-purple700 rounded-2xl py-3 px-6 w-full flex justify-center items-center text-white text-xl font-medium leading-text1 tracking-text1'>
+                Lihat
+            </Button>
         </div>
     );
 };

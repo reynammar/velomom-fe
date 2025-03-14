@@ -4,6 +4,7 @@ import SliderIndicators from './SliderIndicators';
 import img from '../../assets/images/slider-image.jpg'
 import NavigationButton from './NavigationButton';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const sliderData = [
     {
@@ -26,18 +27,39 @@ const sliderData = [
     },
 ];
 
+const slideVariants = {
+    hidden: (direction: number) => ({
+        x: direction > 0 ? 100 : -100,
+        opacity: 0,
+    }),
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.5 },
+    },
+    exit: (direction: number) => ({
+        x: direction > 0 ? -100 : 100,
+        opacity: 0,
+        transition: { duration: 0.5 },
+    }),
+};
+
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(0);
 
     const handlePrev = () => {
+        setDirection(-1);
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? sliderData.length - 1 : prevIndex - 1));
     };
 
     const handleNext = () => {
+        setDirection(1);
         setCurrentIndex((prevIndex) => (prevIndex === sliderData.length - 1 ? 0 : prevIndex + 1));
     };
 
     const handleSelect = (index: number) => {
+        setDirection(index > currentIndex ? 1 : -1);
         setCurrentIndex(index);
     };
 
@@ -45,7 +67,18 @@ const Slider = () => {
         <div className="flex flex-col justify-between items-center gap-11">
             <div className="flex justify-between items-center gap-12">
                 <NavigationButton icon={faArrowLeft} onClick={handlePrev} />
-                <SliderItem {...sliderData[currentIndex]}/>
+                <AnimatePresence initial={false} mode="wait">
+                    <motion.div
+                        key={currentIndex}
+                        custom={direction}
+                        variants={slideVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <SliderItem {...sliderData[currentIndex]} />
+                    </motion.div>
+                </AnimatePresence>
                 <NavigationButton icon={faArrowRight} onClick={handleNext} />
             </div>
             <SliderIndicators currentIndex={currentIndex} totalItems={sliderData.length} onSelect={handleSelect} />

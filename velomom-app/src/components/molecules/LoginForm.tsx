@@ -16,13 +16,10 @@ const LoginForm = () => {
 
     const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setError(''); // Reset error message
-
-        // Verifikasi kredensial
+        setError(''); 
         const account = dummyAccounts.find(acc => acc.email === email && acc.password === password);
         if (account) {
             console.log("Login successful");
-            // Lakukan tindakan setelah login berhasil, seperti redirect atau menyimpan token
         } else {
             setError('Email atau password salah');
         }
@@ -36,14 +33,14 @@ const LoginForm = () => {
                 linkText="Daftar" 
                 linkHref="/register" 
             />
-            {error && <p className="text-red-500 mb-4">{error}</p>} {/* Tampilkan pesan error */}
+            {error && <p className="text-red-500 mb-4">{error}</p>}
             <InputField 
                 label="Email" 
                 type="email" 
                 name="email" 
                 classname='block text-xl font-bold mb-1 text-purple700' 
                 placeholder='Masukkan email'
-                onChange={(e) => setEmail(e.target.value)} // Menangkap nilai email
+                onChange={(e) => setEmail(e.target.value)}
             />
             <InputField 
                 label="Password" 
@@ -51,7 +48,7 @@ const LoginForm = () => {
                 name="password" 
                 classname='block text-xl font-bold mb-1 text-purple700' 
                 placeholder='Masukkan password'
-                onChange={(e) => setPassword(e.target.value)} // Menangkap nilai password
+                onChange={(e) => setPassword(e.target.value)}
             />
             <Button buttonType='submit' classname='w-full py-3 px-6 bg-purple500 text-white rounded-2xl hover:bg-purple700 transition-all duration-300 cursor-pointer'>
                 Masuk

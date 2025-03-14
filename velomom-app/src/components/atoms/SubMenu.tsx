@@ -6,7 +6,7 @@ interface SubMenuProps {
 
 const SubMenu = ({ items }: SubMenuProps) => {
     return (
-        <div className="absolute left-0 mt-6 p-5 w-48 bg-white shadow-lg rounded-md transition-all duration-300 ease-in-out">
+        <div className="absolute left-0 mt-6 p-5 w-48 bg-white shadow-lg rounded-md transition-all duration-100 ">
             {items.map((item) => (
                 <NavLink
                     key={item.to}

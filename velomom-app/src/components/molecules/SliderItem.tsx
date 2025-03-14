@@ -1,5 +1,7 @@
 import { faCalendarDays, faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../atoms/Icon';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface SliderItemProps {
     image: string;
@@ -13,7 +15,14 @@ interface SliderItemProps {
 
 const SliderItem = ({ image, title, description, price, date, time, location}: SliderItemProps) => {
     return (
-            <div className="bg-white flex items-center px-9 py-6 rounded-2xl gap-12">
+        <Link to='/'>
+            <motion.div
+                className="bg-white hover:bg-purple50 flex items-center px-9 py-6 rounded-2xl gap-12 transition-all duration-200"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.2 }}
+            >
                 <img src={image} alt="slider image" className="rounded-3xl w-[272px] h-96" />
                 <div className="flex flex-col justify-center gap-3">
                     <div className="flex flex-col gap-1">
@@ -38,7 +47,8 @@ const SliderItem = ({ image, title, description, price, date, time, location}: S
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
+        </Link>
     );
 };
 
