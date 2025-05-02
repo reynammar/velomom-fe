@@ -70,28 +70,42 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
                 <div className="flex mx-6 gap-12">
                     <NavLink to="/">Home</NavLink>
                     <div className="relative submenu-container">
-                        <div
-                            className="flex items-center cursor-pointer"
-                            onClick={toggleVeloCareSubMenu}
-                        >
-                            <NavLink to="/">VeloCare</NavLink>
-                            <FontAwesomeIcon icon={showVeloCareSubMenu ? faChevronUp : faChevronDown} className="ml-3 text-purple800" />
+                        <div className="flex items-center cursor-pointer">
+                            <NavLink
+                            to="/"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                toggleVeloCareSubMenu();
+                            }}
+                            className="flex items-center"
+                            >
+                            VeloCare
+                            <FontAwesomeIcon
+                                icon={showVeloCareSubMenu ? faChevronUp : faChevronDown}
+                                className="ml-3 text-purple800"
+                            />
+                            </NavLink>
                         </div>
-                        {showVeloCareSubMenu && (
-                            <SubMenu items={veloCareItems} />
-                        )}
+                        {showVeloCareSubMenu && <SubMenu items={veloCareItems} />}
                     </div>
                     <div className="relative submenu-container">
-                        <div
-                            className="flex items-center cursor-pointer"
-                            onClick={toggleVeloGuideSubMenu}
-                        >
-                            <NavLink to="/#">VeloGuide</NavLink>
-                            <FontAwesomeIcon icon={showVeloGuideSubMenu ? faChevronUp : faChevronDown} className="ml-3 text-purple800" />
+                        <div className="flex items-center cursor-pointer">
+                            <NavLink
+                            to="/"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                toggleVeloGuideSubMenu();
+                            }}
+                            className="flex items-center"
+                            >
+                            VeloGuide
+                            <FontAwesomeIcon
+                                icon={showVeloGuideSubMenu ? faChevronUp : faChevronDown}
+                                className="ml-3 text-purple800"
+                            />
+                            </NavLink>
                         </div>
-                        {showVeloGuideSubMenu && (
-                            <SubMenu items={veloGuideItems} />
-                        )}
+                        {showVeloGuideSubMenu && <SubMenu items={veloGuideItems} />}
                     </div>
                     <NavLink to="/velovent-page">VeloVent</NavLink>
                 </div>
