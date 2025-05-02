@@ -86,7 +86,9 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
                             />
                             </NavLink>
                         </div>
-                        {showVeloCareSubMenu && <SubMenu items={veloCareItems} />}
+                        <div className={`transition-all duration-300 ease-out ${showVeloCareSubMenu ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[-5px] pointer-events-none'}`}>
+                        <SubMenu items={veloCareItems} />
+                        </div>
                     </div>
                     <div className="relative submenu-container">
                         <div className="flex items-center cursor-pointer">
@@ -105,7 +107,9 @@ const Navbar = ({ logoSrc }: NavbarProps) => {
                             />
                             </NavLink>
                         </div>
-                        {showVeloGuideSubMenu && <SubMenu items={veloGuideItems} />}
+                        <div className={`transition-all duration-300 ease-out ${showVeloGuideSubMenu ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[-5px] pointer-events-none'}`}>
+                        <SubMenu items={veloGuideItems} />
+                        </div>
                     </div>
                     <NavLink to="/velovent-page">VeloVent</NavLink>
                 </div>

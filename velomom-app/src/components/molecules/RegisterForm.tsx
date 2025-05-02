@@ -7,7 +7,7 @@ import { register } from '../../api/services/auth';
 
 const RegisterForm = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -15,9 +15,9 @@ const RegisterForm = () => {
     e.preventDefault();
 
     try {
-      await register(email, password, name); // username = email (kalau dari backend kamu seperti itu)
+      await register(username, password, name);
       alert('Registrasi berhasil! Silakan login.');
-      navigate('/login'); // 👈 redirect ke halaman login
+      navigate('/login');
     } catch (error: any) {
       console.error('Full error:', error);
       alert(error?.response?.data?.message || 'Registrasi gagal!');
@@ -43,13 +43,13 @@ const RegisterForm = () => {
         placeholder="Masukkan nama"
       />
       <InputField
-        label="Email"
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        label="Username"
+        type="username"
+        name="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         classname="block text-xl font-bold mb-1 text-purple700"
-        placeholder="Masukkan email"
+        placeholder="Masukkan username"
       />
       <InputField
         label="Password"
